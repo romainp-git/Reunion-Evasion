@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply box-border;
+    } 
+}
+
+.video-background {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Pour éviter que la vidéo bloque les interactions */
+    z-index: -1; /* Derrière le contenu */
+}
+
+/* Pour l'animation d'ouverture/fermeture du menu */
+.menu-hidden {
+    display: none;
+}
+
+.menu-visible {
+    display: block;
+}
